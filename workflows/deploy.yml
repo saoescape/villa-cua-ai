@@ -26,7 +26,7 @@ jobs:
       - name: Configura Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Installa le dipendenze
         run: npm install
@@ -40,7 +40,7 @@ jobs:
       - name: Carica il sito compilato
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ./dist
 
   deploy:
     environment:
